@@ -10,7 +10,7 @@
     <%= yield(:head) %>
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-fixed-top navbar-inverse">
       <nav class="navbar-inner">
         <div class="container">
           <%= render 'layouts/navigation' %>
@@ -19,17 +19,68 @@
     </div>
     <div id="main" role="main">
       <div class="container">
+        <div class="row">
+			<div class="encabezado">
+				<div class="span2"><%= image_tag("unjbg.png", size:"150x204") %></div>
+				<div class="span8">
+					<h1>Facultad de Ingeniería</h1>
+					<h3>Escuela Académico Profesional de Ingeniería en Informática y Sistemas</h3>						
+				</div>
+					<div class="span2"><%= image_tag("esis.png") %></div>
+				</div>		   
+		</div>			
         <div class="content">
-           <div class="row">
-            <div class="span12">
-              <%= render 'layouts/messages' %>
-              <%= yield %>
+			<div class="row-fluid">
+			<div class="span2 bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav affix-top">					
+					<li class="active"><%= link_to "link"%></li>
+					<li><%= link_to "link" %></li>
+					<li><%= link_to "link" %></li>
+					<li><%= link_to "link" %></li>
+					<li><%= link_to "link" %></li>
+					<li><%= link_to "link" %></li>
+					<li><%= link_to "link" %></li>						
+				</ul>
+			</div>   
+            <div class="span8">
+				<div class="hero-unit">
+					<%= render 'layouts/messages' %>
+					<%= yield %>
+				</div>              
+            </div>
+            <div class="span2">
+				<div class="well sidebar-nav">
+					<ul class="nav nav-list">
+						<li class="nav-header">Sidebar</li>
+						<li class="active"><%= link_to "link" %></li>
+						<li><%= link_to "link" %></li>
+						<li><%= link_to "link" %></li>
+						<li><%= link_to "link" %></li>
+						<li class="nav-header">Sidebar</li>
+						<li><%= link_to "link" %></li>
+						<li><%= link_to "link" %></li>
+						<li><%= link_to "link" %></li>
+						<li><%= link_to "link" %></li>
+						<li><%= link_to "link" %></li>
+						<li><%= link_to "link" %></li>
+						<li class="nav-header">Sidebar</li>
+						<li><%= link_to "link" %></li>
+						<li><%= link_to "link" %></li>
+						<li><%= link_to "link" %></li>												
+					</ul>
+				</div>
             </div>
           </div>
-          <footer>
-          </footer>
+          
         </div>
       </div> <!--! end of .container -->
     </div> <!--! end of #main -->
+    <footer>
+		<div class="row-fluid">
+			<p>Escuela Académico Profesional de Informatica y sistemas</p>	
+			<p>Ciudad Universitaria - Av. Miraflores S/N - Central Telefónica: 51-52-583000</p>
+			<p>Tacna - PERÚ</p> 
+		</div>
+    </footer>
   </body>
 </html>
