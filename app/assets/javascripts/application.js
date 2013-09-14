@@ -15,3 +15,6 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+.navbar-search .search-query {
+    padding-left: 30px;
+}
