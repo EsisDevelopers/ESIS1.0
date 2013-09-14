@@ -9,26 +9,26 @@
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
   </head>
-  <body class="<%= controller_name %> <%= action_name %>">
-    <div class="navbar navbar-fixed-top navbar-inverse">
+  <body class="<%= controller_name %> <%= action_name %>">    			
+    <div class="navbar navbar-inverse navbar-fixed-top">
       <nav class="navbar-inner">
         <div class="container">
           <%= render 'layouts/navigation' %>
         </div>
       </nav>
     </div>
+    <div class="row">
+		<div class="container">			
+			<div class="span2"><%= image_tag("unjbg.png", size:"150x204") %></div>
+			<div class="span7">
+				<h1>Facultad de Ingeniería</h1>
+				<h3>Escuela Académico Profesional de Ingeniería en Informática y Sistemas</h3>						
+			</div>
+			<div class="span2"><%= image_tag("esis.png") %></div>			
+		</div>		   
+	</div>
     <div id="main" role="main">
-      <div class="container">
-        <div class="row">
-			<div class="encabezado">
-				<div class="span2"><%= image_tag("unjbg.png", size:"150x204") %></div>
-				<div class="span8">
-					<h1>Facultad de Ingeniería</h1>
-					<h3>Escuela Académico Profesional de Ingeniería en Informática y Sistemas</h3>						
-				</div>
-					<div class="span2"><%= image_tag("esis.png") %></div>
-				</div>		   
-		</div>			
+      <div class="container">        
         <div class="content">
 			<div class="row-fluid">
 			<div class="span2 bs-docs-sidebar">
@@ -76,7 +76,8 @@
       </div> <!--! end of .container -->
     </div> <!--! end of #main -->
     <footer>
-		<div class="row-fluid">
+		<div class="container">
+			<h4>Contactenos</h4>
 			<p>Escuela Académico Profesional de Informatica y sistemas</p>	
 			<p>Ciudad Universitaria - Av. Miraflores S/N - Central Telefónica: 51-52-583000</p>
 			<p>Tacna - PERÚ</p> 
