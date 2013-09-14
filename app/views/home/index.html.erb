@@ -1,4 +1,43 @@
 <h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
-<% end %>
+<!---carusel inico .......................... -->
+<div id="myCarousel" class="carousel slide">
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+	<!-- Carousel items -->
+	<div class="carousel-inner">
+		
+		<div class="active item">
+			<div class="resize">
+			<%= image_tag("1.JPG")  %>
+			</div>
+			<div class="carousel-caption">
+				<!--<h4>Ponencias magistrales</h4> -->
+				<p>Nuestros alumnos estuvieron presentes en el XII CONEISC en la ciudad de San Martín-Tarapoto</p>																
+			</div>
+		</div>
+		<div class="item">
+			<div class="resize1">
+				<%= image_tag("2.JPG") %>
+			</div>
+			<div class="carousel-caption">
+				<!--<h4>Titulo imagen 2</h4>-->
+				<p>Participando en la presentación de nuevas tecnologías</p>
+			</div>				
+		</div>
+		<div class="item">
+			<div class="resize2">
+			<%= image_tag("3.JPG") %>
+			</div>
+			<div class="carousel-caption">
+				<!--<h4>Titulo imagen 3</h4>-->
+				<p>Visita a la ciudad universitaria</p>
+			</div>
+		</div>			
+	</div>
+	<!-- Carousel nav -->
+	<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+	<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>		
