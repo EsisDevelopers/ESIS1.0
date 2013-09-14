@@ -1,12 +1,11 @@
-<h3>Users</h3>
-<div class="span8">
+<h3>Administración de Usuarios</h3>
 <table class="table table-condensed">
   <thead>
     <tr>
-      <th>Username</th>
-      <th>Email</th>
-      <th>Registered</th>
-      <th>Role</th>
+      <th>Usuario</th>
+      <th>Correo electrónico</th>
+      <th>Registrado</th>
+      <th>Rol</th>
       <th></th>
       <th></th>
     </tr>
@@ -18,13 +17,13 @@
       <td><%= user.email %></td>
       <td><%= user.created_at.to_date %></td>
       <td><%= user.roles.first.name.titleize unless user.roles.first.nil? %></td>
-      <td>
-        <a data-toggle="modal" href="#role-options-<%= user.id %>" class="btn btn-mini" type="button">Change role</a>
+      <td>	
+        <a data-toggle="modal" href="#role-options-<%= user.id %>" class="btn btn-small btn-primary">Rol</a>
         <%= render user %>
       </td>
-      <td><%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user %></td>
+      <td><%= link_to("Eliminar", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
-</div>
+
