@@ -27,14 +27,17 @@ group :development do
   gem 'rb-fchange', :require=>false
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
+  gem 'faker'
+  gem 'database_cleaner', '1.0.1'
 end
 group :development, :test do
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails'  
   gem 'rspec-rails'
   gem 'thin'
 end
 group :production do
   gem 'unicorn'
+  gem 'pg'
 end
 group :test do
   gem 'capybara'
