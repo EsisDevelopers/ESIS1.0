@@ -28,10 +28,22 @@
 	text-align:center;
 	background:#1E90FF;
 }
+.login{
+		
+	background: #ACDBDE;
+	border-radius: 6px 6px 6px 6px;
+	padding: 20px 20px 20px; /*Es margen del texto y cuadro*/
+	margin: 15% 30% 15%;
+	.sublogin{
+		font-size:14px;
+		text-align:center;
+		line-height: 1;
+		margin: 0;
+	}
+}
 footer{
 	background:#1E90FF;
 	padding: 10px 0px; /*Borde*/
-	padding-left-value: 0px;
 	text-align:center;	
 	line-height: 0.5;  /*Interlineado*/
 }
