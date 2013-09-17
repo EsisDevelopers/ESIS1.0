@@ -27,3 +27,21 @@ puts 'DEFAULT USERS'
 user = User.find_or_create_by_email :codigo => ENV['ADMIN_NAME'].dup, :email => ENV['ADMIN_EMAIL'].dup, :password => ENV['ADMIN_PASSWORD'].dup, :password_confirmation => ENV['ADMIN_PASSWORD'].dup
 puts 'user: ' << user.codigo
 user.add_role :admin
+
+#Creacion de usuario
+a=34000
+50.times do |i|
+    a+=1
+	User.create!(
+		:codigo =>"09-#{a}",
+        :email => Faker::Internet.email,
+        :password => "zxcvbnm#{i}")
+end
+
+#Creación de usuario sin registro previo
+#a=34000
+#50.times do |i|
+#    a+=1
+#	User.create!( :codigo =>"12-#{a}")
+#end
+
