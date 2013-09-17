@@ -1,11 +1,12 @@
-<h2>Sign up</h2>
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
+<div class="registro">
+  <h2>Registrarse</h2>
+  <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
   <%= f.error_notification %>
   <%= display_base_errors resource %>
-  <%= f.input :codigo, :autofocus => true %>
-  <%= f.input :email, :required => true %>
-  <%= f.input :password, :required => true %>
-  <%= f.input :password_confirmation, :required => true %>
-  <%= f.button :submit, 'Sign up', :class => 'btn-primary' %>
-<% end %>
-<%= render "devise/shared/links" %>
+  <%= f.input :codigo, :label => "Código", :placeholder => "Edite código universitario", :autofocus => true %>
+  <%= f.input :email, :label => "Correo electrónico", :placeholder => "correo@ejemplo.com", :required => true %>
+  <%= f.input :password, :label => "Contraseña", :required => true %>
+  <%= f.input :password_confirmation, :label => "Confirmar contraseña", :required => true %>
+  <%= f.button :submit, 'Aceptar', :class => 'btn-primary' %>
+  <% end %>
+</div>
