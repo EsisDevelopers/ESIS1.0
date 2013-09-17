@@ -1,14 +1,14 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2>Editar mi cuenta</h2> <!-- Codigo para mostrar rol -> resource_name.to_s.humanize -->
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form-vertical' }) do |f| %>
   <%= f.error_notification %>
   <%= display_base_errors resource %>
-  <%= f.input :codigo, :autofocus => true %>
-  <%= f.input :email, :required => true %>
-  <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
-  <%= f.input :password_confirmation, :required => false %>
-  <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
-  <%= f.button :submit, 'Update', :class => 'btn-primary' %>
+  <%= f.input :codigo, :label => "Código", :autofocus => true %>
+  <%= f.input :email, :label => "Correo electrónico", :required => true %>
+  <%= f.input :password, :label => "Contraseña", :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
+  <%= f.input :password_confirmation, :label => "Confirmar contraseña", :required => false %>
+  <%= f.input :current_password, :label => "Contraseña actual", :hint => "we need your current password to confirm your changes", :required => true %>
+  <%= f.button :submit, 'Actualizar', :class => 'btn-primary' %>
 <% end %>
-<h3>Cancel my account</h3>
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
-<%= link_to "Back", :back %>
+<h3>Cancelar mi cuenta</h3>
+<p>¿Infeliz? <%= link_to "Cancelar mi cuenta", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
+<%= link_to "Átras", :back %>
