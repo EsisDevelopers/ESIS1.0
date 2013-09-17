@@ -26,7 +26,7 @@
 .row{	
 	padding-top: 10px;
 	text-align:center;
-	background:#1E90FF;
+	background: #FFA500;
 }
 .login{
 		
@@ -41,8 +41,14 @@
 		margin: 0;
 	}
 }
+.registro{
+	margin: auto 15% auto;
+	padding: 20px 20px;
+	*border:1px solid #1E90FF;
+	*border-radius:7px;		
+}
 footer{
-	background:#1E90FF;
+	background:#FFA500;
 	padding: 10px 0px; /*Borde*/
 	text-align:center;	
 	line-height: 0.5;  /*Interlineado*/
