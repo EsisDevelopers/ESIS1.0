@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130916200136) do
+ActiveRecord::Schema.define(version: 20130917043928) do
+
+  create_table "personas", force: true do |t|
+    t.string   "nombre"
+    t.string   "apellido"
+    t.integer  "age"
+    t.string   "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", force: true do |t|
     t.string   "name"
@@ -38,6 +47,13 @@ ActiveRecord::Schema.define(version: 20130916200136) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "codigo"
+    t.string   "dni"
+    t.string   "nombre"
+    t.string   "paterno"
+    t.string   "materno"
+    t.boolean  "sexo"
+    t.date     "fechanacio"
+    t.string   "linkfoto"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
