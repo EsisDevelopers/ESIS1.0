@@ -4,9 +4,9 @@
   <%= display_base_errors resource %>
   <%= f.input :codigo, :label => "Código", :autofocus => true %>
   <%= f.input :email, :label => "Correo electrónico", :required => true %>
-  <%= f.input :password, :label => "Contraseña", :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
+  <%= f.input :password, :label => "Contraseña", :autocomplete => "off", :hint => "Dejar esto en blanco si no quiere cambiarlo", :required => false %>
   <%= f.input :password_confirmation, :label => "Confirmar contraseña", :required => false %>
-  <%= f.input :current_password, :label => "Contraseña actual", :hint => "we need your current password to confirm your changes", :required => true %>
+  <%= f.input :current_password, :label => "Contraseña actual", :hint => " Necesitamos su contraseña actual para confirmar los cambios", :required => true %>
   <%= f.button :submit, 'Actualizar', :class => 'btn-primary' %>
 <% end %>
 <h3>Cancelar mi cuenta</h3>
