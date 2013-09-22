@@ -14,3 +14,8 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym 'RESTful'
 # end
+
+ActiveSupport::Inflector.inflections(:en) do |inflect|
+    inflect.irregular 'seccion', 'secciones'
+    inflect.irregular 'sesion','sesiones'
+end
