@@ -14,6 +14,7 @@ gem 'devise'
 gem 'figaro'
 gem 'rolify'
 gem 'simple_form', '>= 3.0.0.rc'
+gem 'carrierwave'
 group :assets do
   gem 'therubyracer', :platform=>:ruby
 end
