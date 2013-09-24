@@ -1,0 +1,2 @@
+module Academico::SeccionesHelper
+end
