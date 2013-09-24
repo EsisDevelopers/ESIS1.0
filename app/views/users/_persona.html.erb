@@ -1,0 +1,23 @@
+<div class="row-fluid">
+	<div class="span9">
+		<%= simple_form_for(@user, :html => { :method => :put, :class => 'form-horizontal	' }) do |f| %>
+			<%= f.error_notification %>
+			<%= f.input :dni, :label =>'DNI',placeholder:'Número de DNI'%>
+			<%= f.input :nombre,placeholder:'Nombre completo' %>
+			<%= f.input :paterno,placeholder:'Apellido paterno' %>
+			<%= f.input :materno,placeholder:'Apellido materno'%>
+			<%= f.input :sexo,as: :radio_buttons,:collection => [["Femenino", false], ["Masculino", true]] %>
+			<%= f.input :fechanacio, :label => 'Fecha nacimiento',as: :date, start_year: Date.today.year - 90,
+													end_year: Date.today.year - 12,
+													order: [:day,:month, :year] %> 
+			<%= f.button :submit, 'Actualizar', :class => 'btn-primary' %>
+		<% end %>
+	</div>
+	<div class="span3">
+		<div class="thumbnail">
+			<%= image_tag("user.png") %>
+		</div>
+	</div>		
+</div>
+	
+
