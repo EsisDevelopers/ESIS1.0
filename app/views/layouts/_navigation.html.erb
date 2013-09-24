@@ -4,6 +4,8 @@
   <li><%= link_to "Quiénes Somos"%></li>
   <li><%= link_to "Investigaciones"%></li>
   <li><%= link_to "Trámites"%></li>
+  <li><%= link_to "admins",admins_dashboard_index_path %></li>
+  <li><%= link_to "academico",academico_secciones_path %></li>
   <li>		
 	<form class="navbar-search" action="/artists/search">
 		<input class="search-query input-medium" type="text" name="q" placeholder="buscar">
@@ -24,7 +26,7 @@
 	  <li><%= link_to "Ayuda" %></li>
 	  <li class="divider"></li>	  
 	  <% if current_user.has_role? :admin %>
-      <li><%= link_to 'Admin', users_path %></li>
+      <li><%= link_to 'Admin',users_path %></li>
 	  <li class="divider"></li>
 	  <% end %>	
 	  <li><%= link_to 'Cerrar sesión', destroy_user_session_path, :method=>'delete' %></li>	    
