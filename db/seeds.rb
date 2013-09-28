@@ -28,6 +28,10 @@ user = User.find_or_create_by_email :codigo => ENV['ADMIN_NAME'].dup, :email => 
 puts 'user: ' << user.codigo
 user.add_role :admin
 
+user = User.find_or_create_by_email :codigo => ENV['ACADEMICO_NAME'].dup, :email => ENV['ACADEMICO_EMAIL'].dup, :password => ENV['ACADEMICO_PASSWORD'].dup, :password_confirmation => ENV['ACADEMICO_PASSWORD'].dup
+puts 'user: ' << user.codigo
+user.add_role :academico
+
 #Creacion de usuario
 a=34000
 50.times do |i|
