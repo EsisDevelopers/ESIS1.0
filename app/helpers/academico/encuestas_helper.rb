@@ -1,0 +1,2 @@
+module Academico::EncuestasHelper
+end

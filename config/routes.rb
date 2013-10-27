@@ -1,11 +1,13 @@
 ESIS10::Application.routes.draw do
   
-    
-  #get "sesiones/index"
   namespace :admins do
-	get "dashboard/index"
+	root :to => "dashboard#index"
+	#get "dashboard/index"
   end
+  
   namespace :academico do
+	root :to => "secciones#index"
+	resources :encuestas
 	resources :secciones
   end
   
@@ -14,10 +16,8 @@ ESIS10::Application.routes.draw do
   devise_for :users, :controllers => {:registrations => "registrations"}
   #devise_for :admins, :controllers => {:sessions => "admin/sesiones" }
   resources :users do
-	member do
-		post :estudiante
-		post :docente
-		post :administrativo
-	end
-end
+    member do
+      resource :estudiante
+    end 
+  end
 end

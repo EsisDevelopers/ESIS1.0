@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :estudiantes 
   rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -6,11 +7,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   validates_presence_of :codigo
   validates_uniqueness_of :codigo
-  validate :validar_codigo
+  #validate :validar_codigo
 	  
-  before_validation(on: :create) do
-	validar_codigo
-  end
+  #before_validation(on: :create) do
+	#validar_codigo
+  #end
     
   def validar_codigo
 		codigo=self.codigo

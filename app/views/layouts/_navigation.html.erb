@@ -4,8 +4,6 @@
   <li><%= link_to "Quiénes Somos"%></li>
   <li><%= link_to "Investigaciones"%></li>
   <li><%= link_to "Trámites"%></li>
-  <li><%= link_to "admins",admins_dashboard_index_path %></li>
-  <li><%= link_to "academico",academico_secciones_path %></li>
   <li>		
 	<form class="navbar-search" action="/artists/search">
 		<input class="search-query input-medium" type="text" name="q" placeholder="buscar">
@@ -21,7 +19,7 @@
 	
 	<b class="caret"></b></a>
 	<ul class="dropdown-menu"> 	  
-	  <li><%= link_to 'Editar cuenta' %></li>
+	  <li><%= link_to 'Editar cuenta',new_estudiante_path(@user) %></li>
 	  <li><%= link_to "Configurar Privacidad", edit_user_registration_path %></li>
 	  <li><%= link_to "Ayuda" %></li>
 	  <li class="divider"></li>	  

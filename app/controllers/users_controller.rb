@@ -19,18 +19,6 @@ class UsersController < ApplicationController
     end
   end
   
-  def estudiante
-	#user_session :estudiante, @user, :message => 'No autorizado como administrador'
-  end
-  
-  def docente
-  
-  end
-  
-  def admistrativo
-  
-  end
-    
   def destroy
     authorize! :destroy, @user, :message => 'No autorizado como administrador.'
     user = set_user

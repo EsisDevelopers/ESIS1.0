@@ -11,7 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130917043928) do
+ActiveRecord::Schema.define(version: 20131007174325) do
+
+  create_table "encuestas", force: true do |t|
+    t.integer  "pregunta_id"
+    t.integer  "respuesta_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "encuestas", ["pregunta_id"], name: "index_encuestas_on_pregunta_id"
+  add_index "encuestas", ["respuesta_id"], name: "index_encuestas_on_respuesta_id"
+
+  create_table "estudiantes", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "preguntas", force: true do |t|
+    t.string   "denominacion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "preguntas_respuestas", id: false, force: true do |t|
+    t.integer "pregunta_id"
+    t.integer "respuesta_id"
+  end
+
+  add_index "preguntas_respuestas", ["pregunta_id", "respuesta_id"], name: "index_preguntas_respuestas_on_pregunta_id_and_respuesta_id"
+
+  create_table "respuestas", force: true do |t|
+    t.string   "opcion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", force: true do |t|
     t.string   "name"

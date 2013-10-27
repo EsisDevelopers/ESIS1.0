@@ -14,8 +14,7 @@ require 'database_cleaner'
 DatabaseCleaner.strategy = :truncation
 
 # then, whenever you need to clean the DB
-DatabaseCleaner.clean
-
+DatabaseCleaner.clean 
 puts 'ROLES'
 YAML.load(ENV['ROLES']).each do |role|
   Role.find_or_create_by_name(role)
@@ -48,4 +47,29 @@ end
 #    a+=1
 #	User.create!( :codigo =>"12-#{a}")
 #end
+
+#Pregunta
+Pregunta.create(:denominacion => "La Escuela Académico Profesional de Ingeniería en Informática y Sistemas, que gestiona la carrera Profesional, tiene un plan estratégico que ha sido elaborado con la participación de Estudiantes")
+Pregunta.create(:denominacion => "Conoces el plan estratégico de la Escuela Académico Profesional de Ingeniería en Informática y Sistemas")
+Pregunta.create(:denominacion => "Las actividades académicas como horarios, uso de Aulas y laboratorios, matriculas, exámenes, practicas profesionales están coordinadas para  asegurar el desarrollo del proyecto educativo en tu Escuela académica")
+Pregunta.create(:denominacion => "La unidad académica tiene un sistema de gestión de la calidad implementado")
+Pregunta.create(:denominacion => "La Unidad Académica tiene un programa implementado  que contribuye  a internalizar  la cultura organizacional en los estudiantes, docentes y administrativos de la carrera profesional")
+Pregunta.create(:denominacion => "La Unidad Académica tiene un sistema de información y comunicación implementado en su Escuela")
+Pregunta.create(:denominacion => "Conoces el Plan Operativo de la Escuela Académico Profesional de ingeniería en Informática y Sistemas")
+Pregunta.create(:denominacion => "La Unidad Académica tiene programas implementados de motivación e incentivos para los estudiantes")
+Pregunta.create(:denominacion => "Estás de acuerdo con las  estrategias aplicadas de enseñanza-aprendizaje")
+Pregunta.create(:denominacion => "Estás de acuerdo con las estrategias aplicadas para desarrollar tu capacidad de investigación, en cuanto a generación de conocimientos y aplicación de los ya existentes")
+
+#Respuestas default 
+Respuesta.create(:opcion => "TA")
+Respuesta.create(:opcion => "PA")
+Respuesta.create(:opcion => "PA")
+Respuesta.create(:opcion => "DE")
+Respuesta.create(:opcion => "NC")
+Respuesta.create(:opcion => "SI")                                 
+Respuesta.create(:opcion => "NO")
+
+                
+                
+                
 

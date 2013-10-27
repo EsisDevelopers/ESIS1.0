@@ -1,0 +1,19 @@
+<div class="encuesta">
+	<ul class="nav nav-tabs">
+		<li><a href="#modelos" data-toggle="tab">Modelos</a></li>
+		<li><a href="#elaborar" data-toggle="tab">Elaborar</a></li>
+	</ul>
+	<div class="tab-content">
+      <div class="tab-pane active" id="modelos">
+        <% @encuestas.each do |encuesta|%>
+          <%= encuesta.pregunta.denominacion %>
+          <hr>
+        <% end %>
+      </div>
+      <div class="tab-pane" id="elaborar">
+        Datso elaborar
+        <hr>
+	</div>
+</div>
+
+
