@@ -69,7 +69,82 @@ Respuesta.create(:opcion => "NC")
 Respuesta.create(:opcion => "SI")                                 
 Respuesta.create(:opcion => "NO")
 
-                
+#Encuesta
+Encuesta.create(:pregunta_id =>1,:respuesta_id =>1)
+Encuesta.create(:pregunta_id =>1,:respuesta_id =>2)
+Encuesta.create(:pregunta_id =>1,:respuesta_id =>3)
+Encuesta.create(:pregunta_id =>1,:respuesta_id =>4)
+Encuesta.create(:pregunta_id =>1,:respuesta_id =>5)
+
+Encuesta.create(:pregunta_id =>2,:respuesta_id =>1)
+Encuesta.create(:pregunta_id =>2,:respuesta_id =>2)
+Encuesta.create(:pregunta_id =>2,:respuesta_id =>3)
+Encuesta.create(:pregunta_id =>2,:respuesta_id =>4)
+Encuesta.create(:pregunta_id =>2,:respuesta_id =>5)
+
+
+Encuesta.create(:pregunta_id =>3,:respuesta_id =>1)
+Encuesta.create(:pregunta_id =>3,:respuesta_id =>2)
+Encuesta.create(:pregunta_id =>3,:respuesta_id =>3)
+Encuesta.create(:pregunta_id =>3,:respuesta_id =>4)
+Encuesta.create(:pregunta_id =>3,:respuesta_id =>5)
+
+
+Encuesta.create(:pregunta_id =>4,:respuesta_id =>1)
+Encuesta.create(:pregunta_id =>4,:respuesta_id =>2)
+Encuesta.create(:pregunta_id =>4,:respuesta_id =>3)
+Encuesta.create(:pregunta_id =>4,:respuesta_id =>4)
+Encuesta.create(:pregunta_id =>4,:respuesta_id =>5)
+
+Encuesta.create(:pregunta_id =>5,:respuesta_id =>1)
+Encuesta.create(:pregunta_id =>5,:respuesta_id =>2)
+Encuesta.create(:pregunta_id =>5,:respuesta_id =>3)
+Encuesta.create(:pregunta_id =>5,:respuesta_id =>4)
+Encuesta.create(:pregunta_id =>5,:respuesta_id =>5)
+
+Encuesta.create(:pregunta_id =>6,:respuesta_id =>1)
+Encuesta.create(:pregunta_id =>6,:respuesta_id =>2)
+Encuesta.create(:pregunta_id =>6,:respuesta_id =>3)
+Encuesta.create(:pregunta_id =>6,:respuesta_id =>4)
+Encuesta.create(:pregunta_id =>6,:respuesta_id =>5)
+
+Encuesta.create(:pregunta_id =>7,:respuesta_id =>1)
+Encuesta.create(:pregunta_id =>7,:respuesta_id =>2)
+Encuesta.create(:pregunta_id =>7,:respuesta_id =>3)
+Encuesta.create(:pregunta_id =>7,:respuesta_id =>4)
+Encuesta.create(:pregunta_id =>7,:respuesta_id =>5)
+
+
+Encuesta.create(:pregunta_id =>8,:respuesta_id =>1)
+Encuesta.create(:pregunta_id =>8,:respuesta_id =>2)
+Encuesta.create(:pregunta_id =>8,:respuesta_id =>3)
+Encuesta.create(:pregunta_id =>8,:respuesta_id =>4)
+Encuesta.create(:pregunta_id =>8,:respuesta_id =>5)
+
+
+Encuesta.create(:pregunta_id =>9,:respuesta_id =>1)
+Encuesta.create(:pregunta_id =>9,:respuesta_id =>2)
+Encuesta.create(:pregunta_id =>9,:respuesta_id =>3)
+Encuesta.create(:pregunta_id =>9,:respuesta_id =>4)
+Encuesta.create(:pregunta_id =>9,:respuesta_id =>5)
+
+
+Encuesta.create(:pregunta_id =>10,:respuesta_id =>1)
+Encuesta.create(:pregunta_id =>10,:respuesta_id =>1)
+Encuesta.create(:pregunta_id =>10,:respuesta_id =>1)
+Encuesta.create(:pregunta_id =>10,:respuesta_id =>1)
+Encuesta.create(:pregunta_id =>10,:respuesta_id =>1)
+
+
+
+
+
+
+
+
+
+
+
                 
                 
 
