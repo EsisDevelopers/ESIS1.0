@@ -7,7 +7,7 @@ class Academico::EncuestasController < ApplicationController
   def index
     @encuestas=Encuesta.all.group("pregunta_id")
     @respuestas=Encuesta.all
-    @alternativas=Respuesta.all
+    @alternativas=Alternativa.all
   end
 
   def pregunta
