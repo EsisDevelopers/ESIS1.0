@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131107053258) do
+ActiveRecord::Schema.define(version: 20131107072626) do
 
   create_table "alternativas", force: true do |t|
     t.string   "opcion"
@@ -35,6 +35,18 @@ ActiveRecord::Schema.define(version: 20131107053258) do
     t.datetime "updated_at"
   end
 
+  create_table "evaluaciones", force: true do |t|
+    t.integer  "tema_id"
+    t.integer  "encuesta_id"
+    t.string   "contrato_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "evaluaciones", ["contrato_id"], name: "index_evaluaciones_on_contrato_id"
+  add_index "evaluaciones", ["encuesta_id"], name: "index_evaluaciones_on_encuesta_id"
+  add_index "evaluaciones", ["tema_id"], name: "index_evaluaciones_on_tema_id"
+
   create_table "preguntas", force: true do |t|
     t.string   "denominacion"
     t.datetime "created_at"
@@ -51,6 +63,13 @@ ActiveRecord::Schema.define(version: 20131107053258) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
+
+  create_table "temas", force: true do |t|
+    t.string   "titulo"
+    t.string   "descripcion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

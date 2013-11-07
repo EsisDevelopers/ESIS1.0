@@ -135,7 +135,10 @@ Encuesta.create(:pregunta_id =>10,:respuesta_id =>1, :agrupacion =>"Binario")
 Encuesta.create(:pregunta_id =>10,:respuesta_id =>1, :agrupacion =>"Binario")
 Encuesta.create(:pregunta_id =>10,:respuesta_id =>1, :agrupacion =>"Binario")
 
-
+#Tema de la encuesta
+Tema.create(:titulo =>"Plantilla de encuesta para estudiantes", :descripcion =>"Son plantilla de encuestas orientadas a los estudiantes basadas en el CONEAU")
+Tema.create(:titulo =>"Plantilla de encuesta para profesores", :descripcion =>"Son plantilla de encuestas orientadas a los profesores basadas en el CONEAU")
+Tema.create(:titulo =>"Plantilla de encueesta para administrativos", :descripcion =>"Son plantilla de encuestas orientadas a los administrativos, basados en el CONEAU")
 
 
 
