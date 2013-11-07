@@ -53,6 +53,19 @@ ActiveRecord::Schema.define(version: 20131107072626) do
     t.datetime "updated_at"
   end
 
+  create_table "preguntas_respuestas", id: false, force: true do |t|
+    t.integer "pregunta_id"
+    t.integer "respuesta_id"
+  end
+
+  add_index "preguntas_respuestas", ["pregunta_id", "respuesta_id"], name: "index_preguntas_respuestas_on_pregunta_id_and_respuesta_id"
+
+  create_table "respuestas", force: true do |t|
+    t.string   "opcion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "roles", force: true do |t|
     t.string   "name"
     t.integer  "resource_id"
