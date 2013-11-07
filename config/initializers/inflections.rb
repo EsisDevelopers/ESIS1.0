@@ -19,7 +19,7 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
     inflect.irregular 'seccion', 'secciones'
     inflect.irregular 'sesion','sesiones'
     inflect.irregular 'encuesta','encuestas'
-    inflect.irregular 'respuesta','respuestas'
+    inflect.irregular 'alternativa','alternativas'
     inflect.irregular 'pregunta','preguntas'
     inflect.irregular 'estudiante','estudiantes'
     inflect.irregular 'docente','docentes'
