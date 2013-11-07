@@ -1,0 +1,7 @@
+<%= simple_form_for([:academico,@encuesta]) do |f| %>
+  <%= f.error_notification %>
+  <%= f.association :pregunta, label_method: :denominacion, value_method: :id, include_blank: false, :prompt =>"Seleccione tu pregunta" %>
+  <%= f.association :respuesta, label_method: :opcion, value_method: :id, include_blank: false, :prompt => "Seleccione tu respuesta"%>
+<% end %>
+<!--- #f.collection_check_boxes :role_ids, Role.all, :id, :name # using :roles here is not going to work. --
+

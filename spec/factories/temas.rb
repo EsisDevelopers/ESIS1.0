@@ -1,7 +1,8 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :respuesta do
-    opcion "MyString"
+  factory :tema do
+    titulo "MyString"
+    descripcion "MyString"
   end
 end
