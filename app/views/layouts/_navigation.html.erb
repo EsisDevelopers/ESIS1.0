@@ -1,9 +1,9 @@
 <div class="brand"><i class="icon-home"></i></div>
 <%= link_to "ESIS", root_path, :class => 'brand'%>
 <ul class="nav pull-right">
-  <li><%= link_to "Quiénes Somos"%></li>
-  <li><%= link_to "Investigaciones"%></li>
-  <li><%= link_to "Trámites"%></li>
+  <li><%= link_to "Quiénes Somos", somos_path %></li>
+  <li><%= link_to "Investigaciones", invest_path%></li>
+  <li><%= link_to "Trámites", tramit_path%></li>
   <li>		
 	<form class="navbar-search" action="/artists/search">
 		<input class="search-query input-medium" type="text" name="q" placeholder="buscar">
