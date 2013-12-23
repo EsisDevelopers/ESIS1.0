@@ -9,7 +9,7 @@
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
   </head>
-  <body class="<%= controller_name %> <%= action_name %>">    			
+  <body class="<%= controller_name %> <%= action_name %>">
     <div class="navbar navbar-inverse navbar-fixed-top">
       <nav class="navbar-inner">
         <div class="container">
@@ -18,67 +18,54 @@
       </nav>
     </div>
     <div class="header">
-		<div class="container">			
+		<div class="">	
 			<div class="span2"><%= image_tag("unjbg.png", size:"150x204") %></div>
-			<div class="span7">
-				<h1>Facultad de Ingeniería</h1>
+			<div class="span8">
 				<h3>Escuela Académico Profesional de Ingeniería en Informática y Sistemas</h3>						
 			</div>
-			<div class="span2"><%= image_tag("esis.png") %></div>			
-		</div>		   
+            <div class="span2"><%= image_tag("esis.png") %></div>
+		</div>
 	</div>
     <div id="main" role="main">
       <div class="container">        
         <div class="content">
 			<div class="row-fluid">
-			<div class="span2 bs-docs-sidebar">
-				<ul class="nav nav-list bs-docs-sidenav affix-top">					
-					<li class="active"><%= link_to "Mi Menú"%></li>
-					<li><%= link_to "Menú Principal" %></li>
-					<li><%= link_to "Encuestas" %></li>
-					<li><%= link_to "Foro" %></li>
-			
-			</div>   
-            <div class="span8">
-				<div class="hero-unit">
-					<%= render 'layouts/messages' %>
-					<%= yield %>
-				</div>              
-            </div>
-            <div class="span2">
-				<div class="well sidebar-nav">
+            <section>
+				<div class="span2">
 					<ul class="nav nav-list">
-						<li class="nav-header">Noticias</li>
-						<li class="active"><%= link_to "link" %></li>
-						<li><%= link_to "link" %></li>
-						<li><%= link_to "link" %></li>
-						<li><%= link_to "link" %></li>
-						<li class="nav-header">Revista</li>
-						<li><%= link_to "link" %></li>
-						<li><%= link_to "link" %></li>
-						<li><%= link_to "link" %></li>
-						<li><%= link_to "link" %></li>
-						<li><%= link_to "link" %></li>
-						<li><%= link_to "link" %></li>
-						<li class="nav-header">Comunidades</li>
-						<li><%= link_to "link" %></li>
-						<li><%= link_to "link" %></li>
-						<li><%= link_to "link" %></li>												
+						<li class="nav-header">ACTIVIDADES ESIS</li>
+						<li class="active"><%= link_to "Novedades" %></li>
+						<li><%= link_to "Encuestas" %></li>
+						<li><%= link_to "Trámites" %></li>
+						<li><%= link_to "Ingresantes" %></li>
+						<li><%= link_to "Egresados" %></li>
+						<li class="nav-header">MATERIAL ACADÉMICO</li>
+						<li><%= link_to "Modelos de tesis" %></li>
+						<li><%= link_to "Software" %></li>
+						<li><%= link_to "Libros" %></li>
+						<li><%= link_to "Videos" %></li>
+						<li><%= link_to "Web" %></li>
+						<li class="nav-header">COMUNIDADES</li>
+						<li><%= link_to "Basadrinux" %></li>
+						<li><%= link_to "Basadre.net" %></li>
 					</ul>
 				</div>
-            </div>
+            </section>
+            <section>
+				<div class="span10 hero-unit">
+					<%= render 'layouts/messages' %>
+					<%= yield %>
+				</div> 
+            </section>
           </div>
-          
         </div>
       </div> <!--! end of .container -->
     </div> <!--! end of #main -->
     <footer>
-		<div class="container">
-			<h4>Contactenos</h4>
-			<p>Escuela Académico Profesional de Informatica y sistemas</p>	
-			<p>Ciudad Universitaria - Av. Miraflores S/N - Central Telefónica: 51-52-583000</p>
-			<p>Tacna - PERÚ</p> 
-		</div>
+        <h4>Contactenos</h4>
+        <p>Escuela Académico Profesional de Informatica y sistemas</p>	
+        <p>Ciudad Universitaria - Av. Miraflores S/N - Central Telefónica: 51-52-583000</p>
+        <p>Tacna - PERÚ</p> 
     </footer>
   </body>
 </html>
