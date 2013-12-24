@@ -5,53 +5,61 @@
     <title><%= content_for?(:title) ? yield(:title) : "Esis" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "ESIS" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= stylesheet_link_tag "academico" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
   </head>
-  <body class="<%= controller_name %> <%= action_name %>">    			
+  <body class="<%= controller_name %> <%= action_name %>">
     <div class="navbar navbar-inverse navbar-fixed-top">
       <nav class="navbar-inner">
         <div class="container">
           <%= render 'layouts/navigation' %>
-        </div>
-      </nav>
+        </div> </nav>
     </div>
-    <div class="row">
-		<div class="container">			
+    <header>
+		<div class="row-fluid">
 			<div class="span2"><%= image_tag("unjbg.png", size:"150x204") %></div>
-			<div class="span7">
+			<div class="span8">
 				<h1>Facultad de Ingeniería</h1>
-				<h3>Escuela Académico Profesional de Ingeniería en Informática y Sistemas</h3>						
+				<h2>Escuela Académico Profesional de Ingeniería en Informática y Sistemas</h2>						
 			</div>
-			<div class="span2"><%= image_tag("esis.png") %></div>			
-		</div>		   
-	</div>
-    <div id="main" role="main">
-      <div class="container">        
+			<div class="span2"><%= image_tag("esis.png") %></div>
+		</div>
+	</header>
+    <div id="main" role="academico">
+      <div class="container">
         <div class="content">
 			<div class="row-fluid">
-			<div class="span3 bs-docs-sidebar">
-				<ul class="nav nav-list bs-docs-sidenav affix-top">					
-					<li class="active"><%= link_to "link"%></li>
-					<li><%= link_to "Plantillas de evaluaciones", academico_encuestas_path %></li>
-					<li><%= link_to "link" %></li>
-					<li><%= link_to "link" %></li>
-					<li><%= link_to "link" %></li>
-					<li><%= link_to "link" %></li>
-					<li><%= link_to "link" %></li>						
-				</ul>
-			</div>   
-            <div class="span9">
-				<div class="hero-unit">
-					<%= render 'layouts/messages' %>
-					<%= yield %>
-				</div>              
+                <section>
+                    <div class="span3">
+                        <div class="well sidebar-nav">
+                            <ul class="nav nav-list">
+                                <li class="nav-header">ACTIVIDADES ESIS</li>
+                                <li class="active"><%= link_to "Comunicados" %></li>
+                                <li><%= link_to "Trámites" %></li>
+                                <li class="nav-header">ACREDITACIÓN</li>
+                                <li><%= link_to "Encuestas", academico_encuestas_path %></li>
+                                <li><%= link_to "Estudios" %></li>
+                                <li class="nav-header">REPORTES</li>
+                                <li><%= link_to "Gráficos estadísticos" %></li>
+                                <li><%= link_to "Generar documentos" %></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="span9">
+                        <div class="hero-unit">
+                            <%= render 'layouts/messages' %>
+                            <%= yield %>
+                        </div>
+                    </div>
+                </section>
             </div>
-          </div>          
         </div>
       </div> <!--! end of .container -->
-    </div> <!--! end of #main -->    
+    </div> <!--! end of #main -->
     <footer>
 		<div class="container">
 			<h4>Contactenos</h4>
