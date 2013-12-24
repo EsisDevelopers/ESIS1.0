@@ -3,6 +3,7 @@ ESIS10::Application.routes.draw do
   get "home/quienes_somos",:as => "somos"
   get "home/investigacion",:as => "invest"
    get "home/tramites",:as => "tramit"
+     get "home/encuesta_alumno",:as => "encuesta_alumno"
   
   
   namespace :admins do
