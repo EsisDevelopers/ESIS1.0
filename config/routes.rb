@@ -2,25 +2,25 @@ ESIS10::Application.routes.draw do
   
   get "home/quienes_somos",:as => "somos"
   get "home/investigacion",:as => "invest"
-   get "home/tramites",:as => "tramit"
+  get "home/tramites",:as => "tramit"
+  resources :alternativas
   
   
   namespace :admins do
-	root :to => "dashboard#index"
-	#get "dashboard/index"
+    root :to => "dashboard#index"
+    #get "dashboard/index"
   end
   
   namespace :academico do
-	root :to => "secciones#index"
-	resources :encuestas
-	resources :secciones
+    root :to => "secciones#index"
+    resources :secciones
+    resources :encuestas
   end
   
   
-   namespace :estudiante do
-	root :to => "secciones#index"
-	resources :encuestas
-	resources :secciones
+  namespace :estudiante do
+    resources :encuestas
+    resources :secciones
   end
   
   
