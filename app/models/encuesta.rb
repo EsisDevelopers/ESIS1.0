@@ -1,6 +1,5 @@
 class Encuesta < ActiveRecord::Base
- belongs_to :pregunta 
- belongs_to :respuesta 
-
- has_many :evaluacion
+  #belongs_to :contrato
+  belongs_to :tema
+  has_many :detalle_encuestas
 end

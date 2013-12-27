@@ -11,47 +11,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131107072626) do
+ActiveRecord::Schema.define(version: 20131226230613) do
 
   create_table "alternativas", force: true do |t|
-    t.string   "opcion"
+    t.string   "nombre"
+    t.integer  "tipo_encuesta_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "alternativas", ["tipo_encuesta_id"], name: "index_alternativas_on_tipo_encuesta_id"
+
+  create_table "detalle_encuestas", force: true do |t|
+    t.integer  "pregunta_id"
+    t.integer  "alternativa_id"
+    t.integer  "encuesta_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "detalle_encuestas", ["alternativa_id"], name: "index_detalle_encuestas_on_alternativa_id"
+  add_index "detalle_encuestas", ["encuesta_id"], name: "index_detalle_encuestas_on_encuesta_id"
+  add_index "detalle_encuestas", ["pregunta_id"], name: "index_detalle_encuestas_on_pregunta_id"
 
   create_table "encuestas", force: true do |t|
-    t.integer  "pregunta_id"
-    t.integer  "respuesta_id"
+    t.integer  "tema_id"
+    t.integer  "contrato_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "agrupacion"
   end
 
-  add_index "encuestas", ["pregunta_id"], name: "index_encuestas_on_pregunta_id"
-  add_index "encuestas", ["respuesta_id"], name: "index_encuestas_on_respuesta_id"
+  add_index "encuestas", ["contrato_id"], name: "index_encuestas_on_contrato_id"
+  add_index "encuestas", ["tema_id"], name: "index_encuestas_on_tema_id"
 
   create_table "estudiantes", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "evaluaciones", force: true do |t|
-    t.integer  "tema_id"
-    t.integer  "encuesta_id"
-    t.string   "contrato_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "evaluaciones", ["contrato_id"], name: "index_evaluaciones_on_contrato_id"
-  add_index "evaluaciones", ["encuesta_id"], name: "index_evaluaciones_on_encuesta_id"
-  add_index "evaluaciones", ["tema_id"], name: "index_evaluaciones_on_tema_id"
-
   create_table "preguntas", force: true do |t|
     t.string   "denominacion"
+    t.integer  "tipo_encuesta_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "preguntas", ["tipo_encuesta_id"], name: "index_preguntas_on_tipo_encuesta_id"
 
   create_table "roles", force: true do |t|
     t.string   "name"
@@ -67,6 +72,12 @@ ActiveRecord::Schema.define(version: 20131107072626) do
   create_table "temas", force: true do |t|
     t.string   "titulo"
     t.string   "descripcion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tipo_encuestas", force: true do |t|
+    t.string   "nombre"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

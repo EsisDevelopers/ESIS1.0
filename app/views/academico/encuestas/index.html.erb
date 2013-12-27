@@ -1,25 +1,45 @@
-<div class="encuesta">
-	<ul class="nav nav-tabs">
-      <li><a href="#modelos" data-toggle="tab"><i class="icon-folder-open"></i> Encuestas</a></li>
-		<li><a href="#elaborar" data-toggle="tab">Elaborar</a></li>
-		<li><a href="#nuevo" data-toggle="tab">Nuevo</a></li>
-	</ul>
-	<div class="tab-content">
-      <div class="tab-pane active" id="modelos">
-        <% @encuestas.each do |encuesta|%>
-          <%= encuesta.pregunta.denominacion %>
-          <hr>
-        <% end %>
-      </div>
+<h2 class="text-info">Administración de encuestas</h2>
+<section class="estudiantes">
+<div class="modelos">
+    <h3>Modelos de encuestas</h3>
+    <ul class="nav nav-tabs">
+      <li><a href="#estudiantes" data-toggle="tab">Estudiantes</a></li>
+        <li><a href="#elaborar" data-toggle="tab">Profesores</a></li>
+        <li><a href="#nuevo" data-toggle="tab">Administrativos</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="estudiantes">
+          <ul>
+              <% @preguntas.each do |pregunta|%>
+                  <li><%= pregunta.denominacion %></li>
+                  <ol>
+                      <%= @alternativas.each do |alternativa| %>
+                          <li><%= alternativa.nombre %></li>
+                      <% end %>
+                  </ol>
+                  <hr>
+              <% end %>
+          </ul>
+          </div>
       <div class="tab-pane" id="elaborar">
-        Creación de elaborar
-        <hr>
+              Profesores
+            <hr>
       </div>
       <div class="tab-pane" id="nuevo">
-        Creación de nuevas encuestas
-        <hr>
+            Administrativos
+            <hr>
       </div>
-	</div>
-</div>
-
+      </div>
+    </div>
+    <div class="elaborar">
+        <h3>Agregar nuevas encuestas para:</h3>
+        <p class=text-center>
+        <%= link_to "Estudiantes",root_path, :class =>"btn btn-primary" %>
+        <%= link_to "Profesores",root_path, :class =>"btn btn-success" %>
+        <%= link_to "Administrativos",root_path, :class =>"btn btn-warning" %>
+        </p>
+    </div>
+</section>
+<section class="profesores"></section>
+<section class="administrativos"></section>
 

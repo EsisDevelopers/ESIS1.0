@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :encuesta do
-    pregunta_id 1
-    respuesta_id 1
+    tema_id 1
+    contrato_id 1
   end
 end

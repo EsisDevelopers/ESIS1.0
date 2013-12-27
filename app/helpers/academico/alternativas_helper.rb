@@ -1,0 +1,2 @@
+module Academico::AlternativasHelper
+end

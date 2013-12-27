@@ -1,3 +1,3 @@
 class Tema < ActiveRecord::Base
-  has_many :evaluacion
+  has_many :encuesta
 end

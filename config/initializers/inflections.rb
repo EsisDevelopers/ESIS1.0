@@ -26,4 +26,5 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
     inflect.irregular 'administrativo','administrativos'
     inflect.irregular 'tema', 'temas'
     inflect.irregular 'evaluacion', 'evaluaciones'
+    inflect.irregular 'grupo', 'grupos'
 end

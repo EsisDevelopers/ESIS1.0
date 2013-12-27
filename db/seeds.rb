@@ -49,105 +49,54 @@ end
 #end
 
 #Pregunta
-Pregunta.create(:denominacion => "La Escuela Académico Profesional de Ingeniería en Informática y Sistemas, que gestiona la carrera Profesional, tiene un plan estratégico que ha sido elaborado con la participación de Estudiantes")
-Pregunta.create(:denominacion => "Conoces el plan estratégico de la Escuela Académico Profesional de Ingeniería en Informática y Sistemas")
-Pregunta.create(:denominacion => "Las actividades académicas como horarios, uso de Aulas y laboratorios, matriculas, exámenes, practicas profesionales están coordinadas para  asegurar el desarrollo del proyecto educativo en tu Escuela académica")
-Pregunta.create(:denominacion => "La unidad académica tiene un sistema de gestión de la calidad implementado")
-Pregunta.create(:denominacion => "La Unidad Académica tiene un programa implementado  que contribuye  a internalizar  la cultura organizacional en los estudiantes, docentes y administrativos de la carrera profesional")
-Pregunta.create(:denominacion => "La Unidad Académica tiene un sistema de información y comunicación implementado en su Escuela")
-Pregunta.create(:denominacion => "Conoces el Plan Operativo de la Escuela Académico Profesional de ingeniería en Informática y Sistemas")
-Pregunta.create(:denominacion => "La Unidad Académica tiene programas implementados de motivación e incentivos para los estudiantes")
-Pregunta.create(:denominacion => "Estás de acuerdo con las  estrategias aplicadas de enseñanza-aprendizaje")
-Pregunta.create(:denominacion => "Estás de acuerdo con las estrategias aplicadas para desarrollar tu capacidad de investigación, en cuanto a generación de conocimientos y aplicación de los ya existentes")
+Pregunta.create(:denominacion => "La Escuela Académico Profesional de Ingeniería en Informática y Sistemas, que gestiona la carrera Profesional, tiene un plan estratégico que ha sido elaborado con la participación de Estudiantes", :tipo_encuesta_id => 1)
+Pregunta.create(:denominacion => "Conoces el plan estratégico de la Escuela Académico Profesional de Ingeniería en Informática y Sistemas", :tipo_encuesta_id => 1)
+Pregunta.create(:denominacion => "Las actividades académicas como horarios, uso de Aulas y laboratorios, matriculas, exámenes, practicas profesionales están coordinadas para  asegurar el desarrollo del proyecto educativo en tu Escuela académica", :tipo_encuesta_id => 1)
+Pregunta.create(:denominacion => "La unidad académica tiene un sistema de gestión de la calidad implementado", :tipo_encuesta_id => 1)
+Pregunta.create(:denominacion => "La Unidad Académica tiene un programa implementado  que contribuye  a internalizar  la cultura organizacional en los estudiantes, docentes y administrativos de la carrera profesional", :tipo_encuesta_id => 1)
+Pregunta.create(:denominacion => "La Unidad Académica tiene un sistema de información y comunicación implementado en su Escuela", :tipo_encuesta_id => 1)
+Pregunta.create(:denominacion => "Conoces el Plan Operativo de la Escuela Académico Profesional de ingeniería en Informática y Sistemas", :tipo_encuesta_id => 1)
+Pregunta.create(:denominacion => "La Unidad Académica tiene programas implementados de motivación e incentivos para los estudiantes", :tipo_encuesta_id => 1)
+Pregunta.create(:denominacion => "Estás de acuerdo con las  estrategias aplicadas de enseñanza-aprendizaje", :tipo_encuesta_id => 2)
+Pregunta.create(:denominacion => "Estás de acuerdo con las estrategias aplicadas para desarrollar tu capacidad de investigación, en cuanto a generación de conocimientos y aplicación de los ya existentes", :tipo_encuesta_id => 2)
+Pregunta.create(:denominacion => "Estás de acuerdo con las estrategias aplicadas para desarrollar tu capacidad de investigación, en cuanto a generación de conocimientos y aplicación de los ya existentes", :tipo_encuesta_id => 2)
 
-#Respuestas default 
-Alternativa.create(:opcion => "TA")
-Alternativa.create(:opcion => "PA")
-Alternativa.create(:opcion => "PA")
-Alternativa.create(:opcion => "DE")
-Alternativa.create(:opcion => "NC")
-Alternativa.create(:opcion => "SI")                                 
-Alternativa.create(:opcion => "NO")
+#Respuestas default
+Alternativa.create(:nombre => "TA", :tipo_encuesta_id => 1)
+Alternativa.create(:nombre => "DA", :tipo_encuesta_id => 1)
+Alternativa.create(:nombre => "PA", :tipo_encuesta_id => 1)
+Alternativa.create(:nombre => "DE", :tipo_encuesta_id => 1)
+Alternativa.create(:nombre => "NC", :tipo_encuesta_id => 1)
+Alternativa.create(:nombre => "SI", :tipo_encuesta_id => 2)
+Alternativa.create(:nombre => "NO", :tipo_encuesta_id => 2)
+
+#Tipos de encuesta
+TipoEncuesta.create(:nombre => "likert")
+TipoEncuesta.create(:nombre => "binario")
 
 #Encuesta
-Encuesta.create(:pregunta_id =>1,:respuesta_id =>1, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>1,:respuesta_id =>2, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>1,:respuesta_id =>3, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>1,:respuesta_id =>4, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>1,:respuesta_id =>5, :agrupacion =>"Likert")
+DetalleEncuesta.create(:pregunta_id =>1,:alternativa_id=>1, :encuesta_id => "1")
 
-Encuesta.create(:pregunta_id =>2,:respuesta_id =>1, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>2,:respuesta_id =>2, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>2,:respuesta_id =>3, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>2,:respuesta_id =>4, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>2,:respuesta_id =>5, :agrupacion =>"Likert")
+DetalleEncuesta.create(:pregunta_id =>2,:alternativa_id=>1, :encuesta_id => "1")
 
+DetalleEncuesta.create(:pregunta_id =>3,:alternativa_id=>3, :encuesta_id => "1")
 
-Encuesta.create(:pregunta_id =>3,:respuesta_id =>1, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>3,:respuesta_id =>2, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>3,:respuesta_id =>3, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>3,:respuesta_id =>4, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>3,:respuesta_id =>5, :agrupacion =>"Likert")
+DetalleEncuesta.create(:pregunta_id =>4,:alternativa_id=>3, :encuesta_id => "1")
 
+DetalleEncuesta.create(:pregunta_id =>5,:alternativa_id=>4, :encuesta_id => "1")
 
-Encuesta.create(:pregunta_id =>4,:respuesta_id =>1, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>4,:respuesta_id =>2, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>4,:respuesta_id =>3, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>4,:respuesta_id =>4, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>4,:respuesta_id =>5, :agrupacion =>"Likert")
+DetalleEncuesta.create(:pregunta_id =>6,:alternativa_id=>4, :encuesta_id => "1")
 
-Encuesta.create(:pregunta_id =>5,:respuesta_id =>1, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>5,:respuesta_id =>2, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>5,:respuesta_id =>3, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>5,:respuesta_id =>4, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>5,:respuesta_id =>5, :agrupacion =>"Likert")
+DetalleEncuesta.create(:pregunta_id =>7,:alternativa_id=>4, :encuesta_id => "1")
 
-Encuesta.create(:pregunta_id =>6,:respuesta_id =>1, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>6,:respuesta_id =>2, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>6,:respuesta_id =>3, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>6,:respuesta_id =>4, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>6,:respuesta_id =>5, :agrupacion =>"Likert")
+DetalleEncuesta.create(:pregunta_id =>8,:alternativa_id=>2, :encuesta_id => "1")
 
-Encuesta.create(:pregunta_id =>7,:respuesta_id =>1, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>7,:respuesta_id =>2, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>7,:respuesta_id =>3, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>7,:respuesta_id =>4, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>7,:respuesta_id =>5, :agrupacion =>"Likert")
+DetalleEncuesta.create(:pregunta_id =>9,:alternativa_id=>6, :encuesta_id => "1")
 
-
-Encuesta.create(:pregunta_id =>8,:respuesta_id =>1, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>8,:respuesta_id =>2, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>8,:respuesta_id =>3, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>8,:respuesta_id =>4, :agrupacion =>"Likert")
-Encuesta.create(:pregunta_id =>8,:respuesta_id =>5, :agrupacion =>"Likert")
-
-
-Encuesta.create(:pregunta_id =>9,:respuesta_id =>1, :agrupacion =>"Binario")
-Encuesta.create(:pregunta_id =>9,:respuesta_id =>2, :agrupacion =>"Binario")
-Encuesta.create(:pregunta_id =>9,:respuesta_id =>3, :agrupacion =>"Binario")
-Encuesta.create(:pregunta_id =>9,:respuesta_id =>4, :agrupacion =>"Binario")
-Encuesta.create(:pregunta_id =>9,:respuesta_id =>5, :agrupacion =>"Binario")
-
-
-Encuesta.create(:pregunta_id =>10,:respuesta_id =>1, :agrupacion =>"Binario")
-Encuesta.create(:pregunta_id =>10,:respuesta_id =>1, :agrupacion =>"Binario")
-Encuesta.create(:pregunta_id =>10,:respuesta_id =>1, :agrupacion =>"Binario")
-Encuesta.create(:pregunta_id =>10,:respuesta_id =>1, :agrupacion =>"Binario")
-Encuesta.create(:pregunta_id =>10,:respuesta_id =>1, :agrupacion =>"Binario")
+DetalleEncuesta.create(:pregunta_id =>10,:alternativa_id=>7, :encuesta_id => "1")
 
 #Tema de la encuesta
 Tema.create(:titulo =>"Plantilla de encuesta para estudiantes", :descripcion =>"Son plantilla de encuestas orientadas a los estudiantes basadas en el CONEAU")
 Tema.create(:titulo =>"Plantilla de encuesta para profesores", :descripcion =>"Son plantilla de encuestas orientadas a los profesores basadas en el CONEAU")
 Tema.create(:titulo =>"Plantilla de encueesta para administrativos", :descripcion =>"Son plantilla de encuestas orientadas a los administrativos, basados en el CONEAU")
-
-
-
-
-
-
-
-
-
-                
-                
 

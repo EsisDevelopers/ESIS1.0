@@ -3,5 +3,6 @@
 FactoryGirl.define do
   factory :pregunta do
     denominacion "MyString"
+    tipo_encuesta_id 1
   end
 end
